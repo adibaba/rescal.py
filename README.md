@@ -35,7 +35,7 @@ from rescal import rescal_als
 logging.basicConfig(level=logging.INFO)
 
 # Load Matlab data and convert it to dense tensor format
-T = loadmat('data/alyawarra.mat')['Rs']
+T = loadmat('data/alyawarradata.mat')['Rs']
 X = [lil_matrix(T[:, :, k]) for k in range(T.shape[2])]
 
 # Decompose tensor using RESCAL-ALS
