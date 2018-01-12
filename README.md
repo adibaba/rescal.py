@@ -1,3 +1,10 @@
+CHANGES IN THIS FORK
+====================
+
+* Added file example.py, which processes the example data without need to install rescal.py (uses local files)
+* Updated README.md
+* Added wiki notes at https://github.com/adibaba/rescal.py/wiki
+
 RESCAL
 ======
 
@@ -29,7 +36,7 @@ Example script to decompose kinships data using RESCAL-ALS:
 import logging
 from scipy.io.matlab import loadmat
 from scipy.sparse import lil_matrix
-from rescal import rescal_als
+from rescal.rescal import als
 
 # Set logging to INFO to see RESCAL information
 logging.basicConfig(level=logging.INFO)
@@ -39,7 +46,7 @@ T = loadmat('data/alyawarradata.mat')['Rs']
 X = [lil_matrix(T[:, :, k]) for k in range(T.shape[2])]
 
 # Decompose tensor using RESCAL-ALS
-A, R, fit, itr, exectimes = rescal_als(X, 100, init='nvecs', lambda_A=10, lambda_R=10)
+A, R, fit, itr, exectimes = als(X, 100, init='nvecs', lambda_A=10, lambda_R=10)
 ```
 
 For more examples on the usage of RESCAL, please see the [examples](examples) directory in the source tree.
