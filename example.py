@@ -11,4 +11,4 @@ T = loadmat('data/alyawarradata.mat')['Rs']
 X = [lil_matrix(T[:, :, k]) for k in range(T.shape[2])]
 
 # Decompose tensor using RESCAL-ALS
-A, R, fit, itr, exectimes = rescal_als(X, 100, init='nvecs', lambda_A=10, lambda_R=10)
+A, R, fit, itr, exectimes = als(X, 100, init='nvecs', lambda_A=10, lambda_R=10)
