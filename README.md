@@ -1,9 +1,9 @@
-CHANGES IN THIS FORK
-====================
+RESCAL: Fork focus and changes
+==============================
 
+* Wiki notes (e.g. used Python modules and example data set) at https://github.com/adibaba/rescal.py/wiki
 * Added file example.py, which processes the example data without need to install rescal.py (uses local files)
 * Updated README.md
-* Added wiki notes at https://github.com/adibaba/rescal.py/wiki
 
 RESCAL
 ======
